@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- Formulário Simples de Cadastro -->
+    <form onsubmit="emitirAlertta()">
+        
+        <h2>Cadastro</h2>
+
+        <!-- Input Nome -->
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" id="nome" placeholder="Nome Completo">
+
+        <!-- Input E-Mail -->
+        <label for="email">E-Mail</label>
+        <input type="email" name="email" id="email" placeholder="e-mail@e-mail.com">
+
+        <!-- Input Telefone -->
+        <label for="tel">Telefone</label>
+        <input type="tel" name="telefone" id="telefone" placeholder="(00) 00000-0000">
+
+        <!-- Input CPF/CNPJ -->
+        <div>
+            <label for="cpf">CPF</label>
+            <input type="radio" name="cpf" id="cpf">
+
+            <label for="cpf">CNPJ</label>
+            <input type="radio" name="cpf" id="cnpj">
+        </div>
+
+        <!-- Input Data de Nascimento -->
+        <label for="data">Data de Nascimento</label>
+        <input type="date" name="data" id="data">
+
+        <!-- Input Termo de Uso -->
+        <div>
+            <label for="termo">Eu aceito ceder minha alma de livre e espontânea vontade ao Senhor das Trevas</label>
+            <input type="checkbox" name="termo" id="termo">
+        </div>  
+        
+         <!-- Input Botão Enviar -->
+        <input id="enviar" type="submit" value="Enviar">
+    </form>
+    
+</body>
+
+<!-- Aqui que o babado começa !!!! -->
+    <script>
+    function emitirAlertta() {
+        alert("Pacto Realizado 👿👿👿")
+    }
+
+
+    </script>
+
+</html>

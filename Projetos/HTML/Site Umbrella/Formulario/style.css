@@ -1,0 +1,22 @@
+html {
+    background-color: ;
+    
+
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    width: 25%;
+    padding:  30px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 20px 0px 20px 0px; 
+    justify-self: center;
+    background-color: antiquewhite;
+}
+
+input {
+    margin-bottom: 30px;
+}

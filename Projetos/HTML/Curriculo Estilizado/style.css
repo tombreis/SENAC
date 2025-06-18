@@ -1,0 +1,55 @@
+#nome {
+    text-align: center;
+}
+
+#profissão {
+    text-align: center;
+}
+
+#foto {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;    
+}
+
+#foto_perfil {
+    padding-left: 43%;
+    padding-right: 50%;
+}
+
+#rodape {
+    text-align: end;
+    text-align: left;
+}
+
+.sobre {
+    color: rgb(101, 102, 102);
+}
+
+.card {
+    background-color: rgb(228, 228, 228);
+    border-radius: 20px;
+    padding: 5px;
+}
+
+html {
+    background-color: #f2f2f2;
+}
+
+body {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+#botao {
+    display: flex;
+    border-radius: 10%;
+    background-color: rgb(197, 195, 195);
+    border: 1px solid black;
+    justify-content: center;
+}    
+
+#logo_umbre {
+    width: 40px;
+    
+}

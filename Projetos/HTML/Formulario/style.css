@@ -1,0 +1,30 @@
+html {
+    background-color: rgb(121, 152, 172);
+    background-image: url(./capi.jpg);
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    width: 25%;
+    padding:  30px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 20px 0px 20px 0px; 
+    justify-self: center;
+    background-color: rgb(233, 233, 233, 0.7);
+}
+
+input {
+    margin-bottom: 30px;
+}
+
+#enviar {
+    background-color: rgba(226, 43, 98, 0.39);
+    border-radius: 10px;
+}
