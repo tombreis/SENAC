@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.5rem;
+    background-color: #cec9cc
+}
+
+header, footer {
+    background-color: #4f43ae;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+header {
+    box-shadow: 0px 10px 13px #908a99 ;
+}
+
+main {
+    padding: 5rem;
+    text-align: center;
+    color: white;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(10rem, 15rem, 20rem),1fr));
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.card {
+    background-color: #908a99;
+    border-radius: 20px;
+    height: 10rem;
+    text-align: center;
+    box-shadow: 0px 10px 13px #908a99;
+    cursor: pointer;
+}
+
+/* INTERATIVIDADE */
+
+.card:hover {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    transform:scale(1.05);
+    box-shadow: 0px 12px 17px #908a9969;
+}
+
+.card:active {
+    transition: transform 0.3s ease-in-out;
+    transform:scale(0.95);
+    box-shadow: 0px 8px 10px #908a9934;
+}
+    
