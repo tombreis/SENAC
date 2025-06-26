@@ -7,80 +7,152 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        /* Estilo para as setas do carrossel */
+        .carousel-control-next-icon {
+            background-color: rgb(15, 15, 15);
+            padding: 20px;
+            border-radius: 50%;
+        }
+
+        .carousel-control-prev-icon {
+            background-color: rgb(15, 15, 15);
+            padding: 20px;
+            border-radius: 50%;
+        }
+
+        /* Estilo para padronizar as imagens */
+        .card-img-top {
+            width: 100%;
+            height: 200px; /* Altura fixa para todas as imagens */
+            object-fit: cover; /* Mantém a proporção e cobre a área */
+        }
+
+        /* Espaçamento para as setas não ficarem em cima do conteúdo */
+        .carousel {
+            padding: 0 50px;
+        }
+
+        body {
+          height: 100vh;
+          
+
+        }
+
+    </style>
 </head>
 <body>
+  <div class="position-fixed top-0 start-0 w-100 h-100 opacity-25" 
+    style="
+      --bs-bg-opacity: 0.3;
+      background: url('./fundo1.png') fixed center/cover;
+      z-index: -1;">
+  </div>
     <nav class="navbar navbar-expand-lg bg-body-secondary">
         <div class="container">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="#"><img src="./logo.png" alt="Logo" class="d-inline-block align-top" style="height: 70px;"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#">Início</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
+
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
+                  Menu
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Rastreio de Cargas</a></li>
+                  <li><a class="dropdown-item" href="#">Produtos</a></li>
                   <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Análises e Projeções</a></li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                <a class="nav-link disabled" aria-disabled="true">Restrito</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-              <button class="btn btn-outline-success" type="submit">Search</button>
+            <form class="d-flex" role="Busca">
+              <input class="form-control me-2" type="search" placeholder="Busca" aria-label="search"/>
+              <button class="btn btn-outline-danger" type="submit">Buscar</button>
             </form>
           </div>
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row mt-5 ">
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="./logo.png" class="card-img-top" alt="...">
-                    <div class="card-body justify-content-center">
-                      <h5 class="card-title"> <i class="bi bi-umbrella"></i> Card title </h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                      <div class="d-flex justify-content-center"> <a href="#" class="btn btn-primary"><i class="bi bi-umbrella-fill"></i> Logística </a></div>
+  <div class="container-fluid h-75 d-flex align-items-center  ">
+    <div class="container-fluid " >
+      <div class="container ">  
+        <div id="cardsCarousel" class="carousel slide" >
+            <div class="carousel-inner  ">
+                <!-- Primeiro item (ativo) -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card" style="width: 18rem; border-color: black;">
+                                <img src="./imagem_1.png" class="card-img-top" alt="Rastreio de Cargas">
+                                <div class="card-body justify-content-center">
+                                    <h5 class="card-title">Rastreio de Cargas</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div class="d-flex justify-content-center"> <a href="#" class="btn btn-outline-danger"><i class="bi bi-umbrella-fill"></i> Logística </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Segundo item -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card" style="width: 18rem; border-color: black;">
+                                <img src="./imagem_3.png" class="card-img-top" alt="Nossos Produtos">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nossos Produtos</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div class="d-flex justify-content-center"> <a href="#" class="btn btn-outline-danger"><i class="bi bi-umbrella-fill"></i> Produtos </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Terceiro item -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <div class="card" style="width: 18rem; border-color: black;">
+                                <img src="./imagem_2.png" class="card-img-top" alt="Análises e Projeções">
+                                <div class="card-body">
+                                    <h5 class="card-title">Análises e Projeções</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <div class="d-flex justify-content-center"> <a href="#" class="btn btn-outline-danger"><i class="bi bi-umbrella-fill"></i> Análises </a></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="./logo.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title"> <i class="bi bi-umbrella"></i> Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                      <div class="d-flex justify-content-center"> <a href="#" class="btn btn-primary"><i class="bi bi-umbrella-fill"></i> Logística </a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-4">
-                <div class="card" style="width: 18rem;">
-                    <img src="./logo.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title"> <i class="bi bi-umbrella"></i> Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-                      <div class="d-flex justify-content-center"> <a href="#" class="btn btn-primary"><i class="bi bi-umbrella-fill"></i> Logística </a></div>
-                    </div>
-                </div>
-            </div>
-        </div>        
-    </div>  
-
+            
+            <!-- Controles do carrossel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#cardsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#cardsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+      </div>  
+    </div>
+  </div>
+    <footer class="d-flex position-absolute bottom-0 p-1">Umbrella Corporation™ </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    
 </body>
 </html>
