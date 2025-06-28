@@ -1,0 +1,28 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle,rgba(9, 29, 130, 1) 0%, rgba(5, 0, 138, 1) 50%, rgba(97, 51, 166, 1) 100%);
+}
+
+.img-holder {
+    background-image: url(./lampada.png);
+    height: 250px;
+    width: 150px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 200%auto;
+}
+
+.container.on {
+    background: radial-gradient(circle,rgba(255, 255, 255, 1) 0%, rgba(253, 255, 117, 1) 50%, rgba(209, 174, 67, 1) 100%);
+}
