@@ -1,0 +1,2 @@
+pyfiglet==1.0.3
+pygame==2.6.1
