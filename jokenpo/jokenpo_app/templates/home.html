@@ -1,0 +1,19 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jokenpô - Escolha</title>
+  </head>
+  <body>
+    <h1>Escolha sua jogada</h1>
+
+    <form action="{% url 'resultado' %}" method="post">
+      {% csrf_token %}
+
+      <button type="submit" name="jogada" value="pedra">🪨 Pedra</button>
+      <button type="submit" name="jogada" value="papel">📄 Papel</button>
+      <button type="submit" name="jogada" value="tesoura">✂️ Tesoura</button>
+    </form>
+  </body>
+</html>

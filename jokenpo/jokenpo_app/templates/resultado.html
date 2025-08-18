@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado - Pedra, Papel e Tesoura</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: #fff;
+        }
+        
+        .result-display {
+            display: flex;
+            justify-content: space-between;
+            margin: 40px 0;
+        }
+        
+        .player-choice, .computer-choice {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            width: 45%;
+            transition: transform 0.3s;
+        }
+        
+        .player-choice:hover, .computer-choice:hover {
+            transform: translateY(-5px);
+        }
+        
+        .choice-label {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .player-choice .choice-label {
+            color: #4dff4d;
+        }
+        
+        .computer-choice .choice-label {
+            color: #ff4d4d;
+        }
+        
+        .choice-emoji {
+            font-size: 3.5rem; /* Tamanho médio dos emojis */
+            margin: 10px 0;
+            display: block;
+        }
+        
+        .final-result {
+            font-size: 2.2rem;
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            font-weight: 600;
+        }
+        
+        .btn-play-again {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .btn-play-again:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultado</h1>
+        
+        <div class="result-display">
+            <div class="player-choice">
+                <span class="choice-label">Sua escolha</span>
+                <span class="choice-emoji">
+                    {% if escolha_usuario == 'pedra' %}
+                        🪨
+                    {% elif escolha_usuario == 'papel' %}
+                        📄
+                    {% else %}
+                        ✂️
+                    {% endif %}
+                </span>
+            </div>
+            
+            <div class="computer-choice">
+                <span class="choice-label">Computador</span>
+                <span class="choice-emoji">
+                    {% if escolha_computador == 'pedra' %}
+                        🪨
+                    {% elif escolha_computador == 'papel' %}
+                        📄
+                    {% else %}
+                        ✂️
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+        
+        <div class="final-result">
+            {{ resultado }}
+        </div>
+        
+        <button class="btn-play-again" onclick="window.location.href='/'">
+            Jogar Novamente
+        </button>
+    </div>
+</body>
+</html>
