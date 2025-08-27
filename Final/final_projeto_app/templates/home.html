@@ -133,27 +133,15 @@
 
     <main>
         <section class="produtos">
+            {% for produto in produtos %}
             <div class="produto">
-                <img src="https://via.placeholder.com/150" alt="Arroz">
-                <h2>Arroz 5kg</h2>
-                <p>Valor: R$ 25,00</p>
+                <img src="https://via.placeholder.com/150" alt={{produto.titulo}}>
+                <h2>{{produto.titulo}}</h2>
+                <p>{{produto.preco}}</p>
                 <p class="disponibilidade disponivel">Disponível</p>
                 <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
             </div>
-            <div class="produto">
-                <img src="https://via.placeholder.com/150" alt="Feijão">
-                <h2>Feijão Preto</h2>
-                <p>Valor: R$ 8,00</p>
-                <p class="disponibilidade disponivel">Disponível</p>
-                <button class="adicionar-carrinho">Adicionar ao Carrinho</button>
-            </div>
-            <div class="produto">
-                <img src="https://via.placeholder.com/150" alt="Açúcar">
-                <h2>Açúcar 1kg</h2>
-                <p>Valor: R$ 5,00</p>
-                <p class="disponibilidade indisponivel">Indisponível</p>
-                <button class="adicionar-carrinho" disabled>Adicionar ao Carrinho</button>
-            </div>
+            {% endfor %}           
         </section>
     </main>
 
